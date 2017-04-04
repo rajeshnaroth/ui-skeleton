@@ -1,0 +1,97 @@
+$font-family: Century Gothic, CenturyGothic, AppleGothic, sans-serif !important;
+
+//colors
+$backgroundColor: rgb(30, 30, 30);
+$fontColor: rgb(80, 80, 80);
+$linkColor:rgb(80, 100, 255);
+$linkColorHover: rgb(80, 100, 255);
+$linkColorVisited: rgb(80, 100, 255);
+$h1Color: rgb(255, 255, 255);
+$h4Color: rgb(255, 255, 255);
+$whiteFadedBg: rgba(255, 255, 255, 0.4);
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+}
+
+$width-xs:(max-width: 767px);
+$width-sm:(min-width: 768px);
+$width-md:(min-width: 992px);
+$width-lg:(min-width: 1200px);
+$width-xl:(min-width: 1921px);
+
+@mixin break-xs {
+  @media only screen and (max-width: 767px) {
+    @content;
+  }
+}
+
+@mixin break-sm {
+  @media only screen and (min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin break-md {
+  @media only screen and (min-width: 992px){
+    @content;
+  }
+}
+
+@mixin break-lg {
+  @media only screen and (min-width: 1200px) {
+    @content;
+  }
+}
+
+@mixin break-xl {
+  @media only screen and (min-width: 1921px) {
+    @content;
+  }
+}
+
+@mixin break-sm-group {
+  @media only screen and (min-width:768px) {
+    @content;
+  }
+}
+
+@mixin break-lg-group {
+  @media only screen and (min-width:796px)  {
+    @content;
+  }
+}
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+}
+
+.subtitle {
+    font-size: large;
+}
+
+.app {
+  font-family: $font-family;
+  background-color: $backgroundColor;
+  color: $fontColor;
+  position:relative;
+  .app-footer {
+    height:12em;
+    text-align: center;
+  }
+  .app-header {
+    
+  }
+  h3 {
+    @extend .subtitle;
+  }
+}
+
+
+@import 'home'
