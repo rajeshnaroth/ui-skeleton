@@ -1,0 +1,55 @@
+
+
+//colors
+
+$backgroundColor:  rgb(30, 30, 30);
+$whiteFadedBg:     rgba(255, 255, 255, 0.4);
+$titleBg:          rgb(50, 50, 50);
+$navMenuBg:        rgb(50, 50, 50);
+
+$fontColor:        rgb(80, 80, 80);
+$linkColor:        rgb(80, 100, 255);
+$linkColorHover:   rgb(80, 100, 255);
+$linkColorVisited: rgb(80, 100, 255);
+$h1Color:          rgb(255, 255, 255);
+$h2Color:          rgb(255, 255, 255);
+$h3Color:          rgb(255, 255, 255);
+$h4Color:          rgb(255, 255, 255);
+$h5Color:          rgb(255, 255, 255);
+$h6Color:          rgb(255, 255, 255);
+
+$borderLineColor:   rgb(100, 100, 100);
+//fonts
+
+@mixin fontFace($family, $src) {
+    @font-face {
+        font-family: $family;
+        src: url('#{$src}.ttf') format('truetype');
+    }
+}
+
+@include fontFace('OpenSans', '../fonts/OpenSans-Regular');
+@include fontFace('OpenSans Bold', '../fonts/OpenSans-Bold');
+@include fontFace('OpenSans Light', '../fonts/OpenSans-Light');
+
+$font-normal: OpenSans, Century Gothic, CenturyGothic, AppleGothic, sans-serif !important;
+$font-bold:   OpenSans Bold, Century Gothic, CenturyGothic, AppleGothic, sans-serif !important;
+$font-light:  OpenSans Light, Century Gothic, CenturyGothic, AppleGothic, sans-serif !important;
+
+//mixins
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+}
+
+@mixin transition($args...) {
+  -webkit-transition: $args;
+  -moz-transition: $args;
+  -ms-transition: $args;
+  -o-transition: $args;
+  transition: $args;
+}
+

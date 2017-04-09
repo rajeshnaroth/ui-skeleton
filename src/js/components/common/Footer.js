@@ -1,8 +1,9 @@
 import React from 'react';
 const Footer = (props) => (
-    <div className="app-footer">       
+    <footer>       
             Copyright & links
-    </div>
+    </footer>
+
 );
 
 export default Footer;

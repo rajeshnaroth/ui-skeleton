@@ -1,0 +1,35 @@
+.long-page {
+    h4 {
+      margin: 0 0;
+      padding: 4rem 0;
+    }
+
+    .image-panel {
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: bottom center;
+        min-height: 900px;
+        position: relative;
+    }
+
+    .pagelet {
+        @extend .image-panel;
+
+        &.splash { background-image: url(../images/bg1.jpg) }
+        &.who-we-are { background-image: url(../images/bg2.jpg) }
+        &.what-we-do { background-image: url(../images/bg3.jpg) }
+        &.why-we-do-it { background-image: url(../images/bg4.jpg) }
+        &.who-we-do-it-for  { background-image: url(../images/bg5.jpg) }
+
+        .mission-statement {
+            @include border-radius(2rem);
+            padding:1rem;
+            background-color: $whiteFadedBg;
+            p {
+                color: white;
+                font-size:2rem;
+                margin-top: 5rem;
+            }
+        }
+    }
+}

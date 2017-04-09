@@ -1,6 +1,6 @@
 import {combineReducers} from 'redux';
-import sampleReducer from './sampleReducer';
+import homeMenu from './homeMenu';
 
 export default combineReducers({
-    sampleReducer
+    homeMenu
 });
