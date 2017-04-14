@@ -1,6 +1,4 @@
-//@import '~compass-mixins/lib/compass/reset';
-//@import '~compass-mixins/lib/compass/css3';
-@import '~susy/sass/susy';
+@import '~bootstrap/scss/bootstrap';
 @import 'lib/font-awesome/sass/font-awesome';
 
 @import 'definitions';
@@ -8,7 +6,7 @@
 body {
   font-family: $font-normal;
   font-size:14px;
-  background-color: $backgroundColor;
+  background-color: $bg1;
   color: $fontColor;
 }
 
@@ -45,5 +43,6 @@ h4 {
   }
 }
 
-@import 'longpage';
+@import 'common';
 @import 'header';
+@import 'longpage';

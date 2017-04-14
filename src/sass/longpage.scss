@@ -1,35 +1,148 @@
 .long-page {
-    h4 {
-      margin: 0 0;
-      padding: 4rem 0;
-    }
-
-    .image-panel {
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: bottom center;
-        min-height: 900px;
-        position: relative;
-    }
 
     .pagelet {
-        @extend .image-panel;
+        min-height: 100vh;
+        height: auto;
 
-        &.splash { background-image: url(../images/bg1.jpg) }
-        &.who-we-are { background-image: url(../images/bg2.jpg) }
-        &.what-we-do { background-image: url(../images/bg3.jpg) }
-        &.why-we-do-it { background-image: url(../images/bg4.jpg) }
-        &.who-we-do-it-for  { background-image: url(../images/bg5.jpg) }
+        // figure, article, figcaption, blockquote, ul, li {
+        //     padding:0 0 0 0;
+        //     margin:0 0 0 0;
+        // }
 
-        .mission-statement {
+        h4 {
+            font-size: 2rem;
+            font-family: $font-light;
+            font-weight: bold;
+            color:$fg2;
+        }
+
+        .title {
+            height:20vh;
+        }
+
+        .statement {
             @include border-radius(2rem);
+            //background-color: $whiteFadedBg;
             padding:1rem;
-            background-color: $whiteFadedBg;
-            p {
-                color: white;
-                font-size:2rem;
-                margin-top: 5rem;
+            text-align: center;
+            color: white;
+            font-size:1rem;
+        }
+
+        .bulletbox {
+            padding:1rem 2rem;
+            h5 {
+                font-family: $font-light;
+                font-size: 2rem;
+                padding:0.5rem;
             }
+
+            .bullets {
+                margin:1rem;
+                padding: 0.5rem;
+            }
+
+            p {
+                color:$bg1;
+            }
+        }
+
+
+        &.home {
+            vertical-align: middle;
+            background-color:$bg3;
+            h3 {
+                font-family: $font-light;
+            }
+            .banner {
+                height:50vh;
+                background-size: cover;
+                background: url(../images/bg1.jpg) no-repeat bottom center;
+                @include media-breakpoint-down(sm) { 
+                    font-size:1rem;
+                }
+                @include media-breakpoint-down(md) { 
+                    font-size:2rem;
+                }
+            }
+            .statement {
+                height:50vh;
+                font-size:2rem;
+                
+                @include media-breakpoint-up(xs) { 
+                    font-size:1rem;
+                }
+                @include media-breakpoint-up(sm) { 
+                    font-size:1.5rem;
+                }
+                @include media-breakpoint-up(md) { 
+                    font-size:1.5rem;
+                }
+                @include media-breakpoint-up(lg) { 
+                    font-size:2rem;
+                }
+                @include media-breakpoint-up(xl) { 
+                    font-size:2.5rem;
+                }
+            }
+        }
+
+        &.what-we-do {
+            background-color:bg1;
+            .statement {
+            }
+            .bulletbox {
+                h5 { color: $fg2; }
+                .bullets {
+                    color:$fg3;
+                }
+            }
+        }
+
+        &.who-we-are {
+            h4 {
+                color:$bg1;
+            }
+            background-color:white;
+            .statement {
+                color: $bg1;
+            }
+            .bulletbox {
+                h5 { color: $bg1; }
+                .bullets {
+                    background-color: $whiteFadedBg;
+                }
+                .founder{
+                    width:70%;
+                }
+            }
+        }
+
+        &.why-we-do-it {
+            background-color:$bg3;
+            .statement {
+            }
+            .bulletbox {
+                p {
+                    color:$fg1;
+                }
+            }
+        }
+
+        &.who-we-do-it-for {
+            background-color:bg1;
+            .statement {
+            }
+            .bulletbox {
+                p {
+                    color:$fg1;
+                }
+            }
+        }
+
+        &.contact {
+            background-color: $whiteFadedBg;
         }
     }
 }
+

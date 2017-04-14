@@ -1,14 +1,71 @@
 {
     "en": {
-        "home.name": "Logo / Title",
-        "home.missionStatement": "Globally customize cost effective intellectual capital and authoritatively operationalize error-free products while maintaining the highest standards"
+        "home.name": "RegeneratIT",
+        "home.tagline": "Small Farm Management Platform",
+        "home.logline": "Cultivating Old and New Farming Technology",
+        "home.description": "Cultivating Old and New Farming Technology utilizing regenerative farming methods utilized prior to 1950 with modern business technologies required to be profitable now and into the future.",
+        
+        "what.title": "What we do",
+        "what.description": "We provide an environment for small farmers to manage their farms in a single location from any device. Our three pronged approach provides small farmers the ability to gain an education in farming practices and principles needed to regenerate their existing farms or new farms into profitable businesses. We achieve this through the use of many different models and practices designed to help the farmer understand their entire enterprise and the ripple effects of every decision they make. Utilized properly, a small farm can future proof their business and properly plan their revenue streams, develop their customer bases and manage production flow more efficiently and effectively.",
+        "what.edu": "Education",
+        "what.edu.1": "Principles of regenerative agriculture",
+        "what.edu.2": "Sustainable farm practices",
+        "what.edu.3": "Principles of soil health",
+        "what.edu.4": "Rotational mob grazing",
+        "what.edu.5": "Multi-species grazing",
+        "what.edu.6": "Forage improvement",
+        "what.edu.7": "Multi-tiered revenue streams",
+
+        "what.farm": "Farm Management",
+        "what.farm.1": "Farm Management",
+        "what.farm.2": "Grazing planning",
+        "what.farm.3": "Soil Management",
+        "what.farm.4": "Crop Rotation",
+        "what.farm.5": "Communication",
+        "what.farm.6": "Finance",
+        "what.farm.7": "Marketing",
+        "what.farm.8": "E-commerce",
+
+        "what.data": "Putting Data to Work",
+        "what.data.1": "Inventory Management",
+        "what.data.2": "Customer Contacts",
+        "what.data.3": "Supplier Contacts",
+        "what.data.4": "Product Catalog",
+        "what.data.5": "Weather Data Integration",
+        "what.data.6": "Tax Information Preparation",
+        "what.data.7": "Legal Issues and legislation",
+
+        "who.title": "Who we are",
+        "who.description": "We are a global regenerative small farm management software utilizing holistic management principles to educate, assist, and align small farms with their farm management goals and practices. This is accomplished through a three pronged approach consisting of education, farm management, and data management.",
+        "who.person1": "Melissa Havemann, BSBA",
+        "who.person1.details": "Melissa has over 15 years of marketing experience. She is a graduate of the Holistic Management International (HMI) Beginning Women Farming and Ranching Program focusing on holistic farm management. She also studied extensively the sustainable real food movement providing her a unique perspective into the requirements of discerning consumers.",
+        "who.person2": "Doug Havemann, BSCIS",
+        "who.person2.details": "Over his 20+ year career working for two Fortune 100 companies Doug was responsible for the IT architecture, development, launch, and maintenance of systems and solutions for multi-million dollar clients. Growing up on a small farm led Doug back to farming and the study of new agricultural technologies and generational farming methods utilized by individuals such as Joel Salatin of Polyface Farm. Doug is also a graduate of the HMI Beginning Farmers and Ranchers Program.",
+
+        "why.title": "Why we do it",
+        "why.item1": "Personally",
+        "why.item1.text": "The short answer... we produce real food and we feed people. The long answer... we maintain and continue to improve our farm utilizing holistic farming practices in all business verticals, cultivating the symbiotic relationships present in nature, producing nutrient dense food that heals our bodies, minds, community and the land and animals that we steward. We have a sustainable and renewable connection to the land, maximize forage/grass production, and improve soil health and biodiversity. This allows us to be successful to our family and our community.",
+        "why.item2": "The Bigger Picture",
+        "why.item2.text": "When we began this adventure there was no rule book or guide that defined how it should be done. There are many different schools of thought and each one is fraught with information that is specific to its own model and methodologies. We spent a lot of time and money learning the hard way. We learned a lot of information and it cost us a lot of time. TIme is the one thing we are unable to get back. It is our intention to provide a single location for a small farmer to gain information that is relevant to their model and help them maximize their potential and reduce their costs and be more profitable. This is a global experience not just found in the United States.",
+
+        "whofor.title": "Who is this for",
+        "whofor.item1": "Small Farmer",
+        "whofor.item1.text": "There are many resources available for large agribusiness farmers. The big multi-national companies have spent a ton of money developing products for large farmers. However, there is very little available for small scale farmers. It is the opinion of big agriculture that small farms do not produce enough to warrant creating solutions for them. This software was designed to give the small farmer the ability to manage their farms and be more efficient thereby more profitable.",
+        "whofor.item2": "Beginning Farmer",
+        "whofor.item2.text": "This software will provide a full platform and education for the beginning farmer. Preventing them from wading through the information, state and federal departments and information designed for agribusiness big farms. The majority of the agribusiness models require large expenditures of capital to become operational. Utilizing the practices and models presented here will allow new farmers to develop their models and prepare for decisions prior to spending their capital resources.",
+    
+        "contact.title": "Contact Us"
     },
     "fr": {
-        "home.name": "Logo / Titre",
-        "home.missionStatement": "Personnaliser globalement le capital intellectuel rentable et mettre en œuvre de manière autoritaire des produits sans erreur tout en maintenant les normes les plus élevées"
+        "home.name": "RegeneratIT",
+        "home.tagline": "Small Farm Management Platform",
+        "home.logline": "Cultivating Old and New Farming Technology",
+        "home.description": "Utilizing regenerative farming methods utilized prior to 1950 with modern business technologies required to be profitable now and into the future."
     },
     "es": {
-        "home.name": "Logo / Title",
-        "home.missionStatement": "Personalizar a nivel mundial coste de capital intelectual eficaz y con autoridad en funcionamiento productos libres de errores, mientras que maintPersonnaliser capital intelectual global rentable y aplicar con autoridad error productos libres manteniendo los más altos estándares élevéesaining los más altos estándares"
+        "home.name": "RegeneratIT",
+        "home.tagline": "Small Farm Management Platform",
+        "home.logline": "Cultivating Old and New Farming Technology",
+        "home.description": "Utilizing regenerative farming methods utilized prior to 1950 with modern business technologies required to be profitable now and into the future."
     }
 }

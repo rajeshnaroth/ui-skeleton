@@ -1,17 +1,28 @@
-header {
+.app header {
   position:fixed;
+  top: 0;
   width: 100%;
   z-index: 100;
   @include transition(opacity, 0.5s, linear);
 
   section{
-    background-color: $titleBg;
+    background-color: $bg1;
     h1 {
       text-align: center;
     }
+    h3 {
+      text-align: center;
+      font-size: 1.5rem;
+      font-family: $font-light;
+      font-weight: bold;
+      color:$fg1;
+      padding-bottom: 0.2rem;
+    }
     .hamburger-icon {
       font-size: 2rem;
+      margin-left: 0.6rem;
       float:left;
+      color: $navMenuFg;
     }
   }
 
@@ -36,6 +47,8 @@ header {
             text-decoration: none;
         }
         margin: 0 1rem;
+        cursor:pointer;
+        color: $navMenuFg;
     }
   }
 }

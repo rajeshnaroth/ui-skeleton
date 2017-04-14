@@ -2,10 +2,16 @@
 
 //colors
 
-$backgroundColor:  rgb(30, 30, 30);
-$whiteFadedBg:     rgba(255, 255, 255, 0.4);
-$titleBg:          rgb(50, 50, 50);
-$navMenuBg:        rgb(50, 50, 50);
+$bg1:  #444F4F;
+$bg2:  #5D632C;
+$bg3:  #C99846;
+$fg1:  #FCF5C3;
+$fg2:  #E6E895;
+$fg3:  #f0f0f0;
+
+$whiteFadedBg:     rgba(252, 255, 195, 0.4);
+$navMenuFg:        $fg1;
+$navMenuBg:        $bg1;
 
 $fontColor:        rgb(80, 80, 80);
 $linkColor:        rgb(80, 100, 255);
@@ -52,4 +58,3 @@ $font-light:  OpenSans Light, Century Gothic, CenturyGothic, AppleGothic, sans-s
   -o-transition: $args;
   transition: $args;
 }
-

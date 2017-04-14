@@ -45,7 +45,7 @@
     "whatwg-fetch": "2.0.2"
   },
   "dependencies": {
-    "bootstrap": "^3.3.7",
+    "bootstrap": "4.0.0-alpha.6",
     "choreojs": "^1.0.9",
     "intl": "^1.2.5",
     "lodash": "^4.17.4",
@@ -57,8 +57,7 @@
     "react-router-dom": "^4.0.0",
     "redux": "^3.6.0",
     "redux-promise": "^0.5.3",
-    "redux-thunk": "^2.2.0",
-    "susy": "^2.2.12"
+    "redux-thunk": "^2.2.0"
   },
   "scripts": {
     "start": "node scripts/start.js",

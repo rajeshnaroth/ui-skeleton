@@ -10,48 +10,57 @@ import Choreo from 'choreojs';
 
 // slideOut: when user scrolls below a certain threshold
 // slideIn: slides in when user scrolls up a bit
-let showMenu = false;
 const Header = React.createClass({
+    propTypes: {
+        showHeader: React.PropTypes.bool
+    },
     getInitialState() { 
+        this.showMenu = false;
         return {
             headerStyle:{},
             navStyle:{ display:'none', opacity:0 }
         }
     },
     showNav() {
-        let seq = Choreo.create();
+        if (this.seq1) {
+            this.seq1.cancel();
+        }
+        this.seq1 = Choreo.create();
 
-        seq.add(() => {
+        this.seq1.add(() => {
             this.setState({
                 navStyle:{ display:'block', opacity:0 }
             });
         });
-        seq.add(() => {
+        this.seq1.add(() => {
             this.setState({
                 navStyle:{ opacity:1 }
             });
         });
-        seq.start();
+        this.seq1.start();
     },
     hideNav() {
-        let seq = Choreo.create();
-        showMenu = false;
-        seq.add(() => {
+        if (this.seq2) {
+            this.seq2.cancel();
+        }
+        this.seq2 = Choreo.create();
+        this.showMenu = false;
+        this.seq2.add(() => {
             this.setState({
                 navStyle:{ opacity:0 }
             });
         });
-        seq.wait(500);
-        seq.add(() => {
+        this.seq2.wait(500);
+        this.seq2.add(() => {
             this.setState({
             navStyle:{ opacity:0, display:'none' }
             });
         });
-        seq.start();
+        this.seq2.start();
     },
     toggleNav() {
-        showMenu = !showMenu;
-        if (showMenu) {
+        this.showMenu = !this.showMenu;
+        if (this.showMenu) {
             this.showNav();
         } else {
             this.hideNav();
@@ -71,7 +80,7 @@ const Header = React.createClass({
         }
     },
     render() { 
-        const hamburgerMenuIconClass = showMenu ? 'fa fa-times' : 'fa fa-bars';
+        const hamburgerMenuIconClass = this.showMenu ? 'fa fa-times' : 'fa fa-bars';
         const goToPanel = (panelId) => (e) => { 
             this.props.setPanelTo(panelId);
         }
@@ -82,7 +91,7 @@ const Header = React.createClass({
                         <i className={hamburgerMenuIconClass} aria-hidden="true"></i> 
                     </span>
                     <h1>
-                        <FormattedMessage id="app.name" defaultMessage={`Logo/Title`} />
+                        <FormattedMessage id="home.name" defaultMessage={`Logo/Title`} />
                     </h1>
                 </section>
                 <nav style={this.state.navStyle}>
