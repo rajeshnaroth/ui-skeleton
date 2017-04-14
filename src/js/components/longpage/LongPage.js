@@ -28,8 +28,7 @@ const LongPage = React.createClass({
         this.setState(state);
     },
     scroll(ev, tgt) {
-            if (this.lastScrollY !== undefined) {
-            
+        if (this.lastScrollY !== undefined) {
             if (window.scrollY < this.lastScrollY || window.scrollY < 300) {
                 this.props.setHeaderVisibility(true)
             } else {
@@ -39,7 +38,6 @@ const LongPage = React.createClass({
         this.lastScrollY = window.scrollY;
     },
     resize(ev, tgt) {
-        console.log("LongPage.js: resize");
         this.forceUpdate();        
     },
     componentDidMount() {
@@ -50,60 +48,54 @@ const LongPage = React.createClass({
         window.removeEventListener('scroll', this.scroll);
         window.removeEventListener('resize', this.resize);
     },
-    setPanel(panelId, domElem) {
-        console.log(panelId, domElem);
-        //let panelVal = {};
-        if (domElem) {
-            this.panels[panelId] = domElem.getBoundingClientRect().top + window.scrollY;
-        }
-    },
     componentWillReceiveProps(nextProps) {
         const yPos = this.panels[nextProps.currentPanel];
-        console.log("LongPage.js: ", window.scrollY, yPos);
+        console.log("LongPage.js componentWillReceiveProps: ", window.scrollY, yPos);
                 
         if ( window.scrollY !== yPos ) {
             slowScrollTo(window.scrollY, yPos).then(() => {});
-            //ReactDOM.findDOMNode(this.state['home']).scrollTo(0, boundingBox.top);
         }
     },
     shouldComponentUpdate(nextProps, nextState) {
+        console.log("LongPage.js shouldComponentUpdate");
         return false;
     },
     render() {
-        var setDomElement = (panelId) => (domElem) => { this.setPanel(panelId, domElem); };
-        console.log("LongPage.js: render()");
+        var setDomElement = (panelId) => (domElem) => { 
+            this.panels[panelId] = domElem.getBoundingClientRect().top + window.scrollY; 
+        };
                 
         return (
             <div>
                 <HeaderContainer />
                 <div className="long-page">
                     <a name="home"></a>
-                    <section ref={setDomElement('home')}>
+                    <section ref={ setDomElement('home') }>
                         <HomePanel />
                     </section>
                     
                     <a name="what"></a>
-                    <section ref={setDomElement('what')}> 
+                    <section ref={ setDomElement('what') }> 
                         <WhatPanel />
                     </section>
                     
                     <a name="who"></a>
-                    <section ref={setDomElement('who')} >
+                    <section ref={ setDomElement('who') } >
                         <WhoPanel />
                     </section>
 
                     <a name="why"></a>
-                    <section ref={setDomElement('why')}> 
+                    <section ref={ setDomElement('why') }> 
                         <WhyPanel />
                     </section>
 
                     <a name="who-for"></a>
-                    <section ref={setDomElement('whofor')}> 
+                    <section ref={ setDomElement('whofor') }> 
                         <WhoForPanel />
                     </section>
 
                     <a name="contact"></a>
-                    <section ref={setDomElement('contact')}> 
+                    <section ref={ setDomElement('contact') }> 
                         <ContactPanel />
                     </section>
                 </div>
