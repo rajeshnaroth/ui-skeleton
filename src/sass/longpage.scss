@@ -142,6 +142,9 @@
 
         &.contact {
             background-color: $whiteFadedBg;
+            .statement{
+                text-align: left;
+            }
         }
     }
 }

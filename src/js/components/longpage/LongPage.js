@@ -14,7 +14,7 @@ import { slowScrollTo } from '../../utils/domutils';
 
 const LongPage = React.createClass({
     propTypes: {
-        currentPanel: React.PropTypes.string
+        currentPanel: React.PropTypes.object
     },
     getInitialState() {
         this.panels = {};
@@ -23,9 +23,6 @@ const LongPage = React.createClass({
             showHeader: true,
             resized: false
         }
-    },
-    showHeader(state) {
-        this.setState(state);
     },
     scroll(ev, tgt) {
         if (this.lastScrollY !== undefined) {
@@ -41,28 +38,31 @@ const LongPage = React.createClass({
         this.forceUpdate();        
     },
     componentDidMount() {
-        window.addEventListener('scroll', this.scroll);        
-        window.addEventListener('resize', this.resize);        
+        this.scrollerCB = _.throttle(this.scroll, 300);
+        this.resizeCB = _.throttle(this.resize, 500);
+        window.addEventListener('scroll', this.scrollerCB);        
+        window.addEventListener('resize', this.resizeCB);        
     },
     componentWillUnmount() {
-        window.removeEventListener('scroll', this.scroll);
-        window.removeEventListener('resize', this.resize);
+        window.removeEventListener('scroll', this.scrollCB);
+        window.removeEventListener('resize', this.resizeCB);
     },
     componentWillReceiveProps(nextProps) {
-        const yPos = this.panels[nextProps.currentPanel];
-        console.log("LongPage.js componentWillReceiveProps: ", window.scrollY, yPos);
+        const currentPanelId = nextProps.currentPanel.panelId;
+        const yPos = this.panels[currentPanelId];
                 
         if ( window.scrollY !== yPos ) {
             slowScrollTo(window.scrollY, yPos).then(() => {});
         }
     },
     shouldComponentUpdate(nextProps, nextState) {
-        console.log("LongPage.js shouldComponentUpdate");
         return false;
     },
     render() {
         var setDomElement = (panelId) => (domElem) => { 
-            this.panels[panelId] = domElem.getBoundingClientRect().top + window.scrollY; 
+            if (domElem) {
+                this.panels[panelId] = domElem.getBoundingClientRect().top + window.scrollY; 
+            }
         };
                 
         return (
@@ -105,6 +105,3 @@ const LongPage = React.createClass({
 });
 
 export default LongPage;
-/*
-
-                    */

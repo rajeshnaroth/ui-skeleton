@@ -54,7 +54,11 @@
         "whofor.item2": "Beginning Farmer",
         "whofor.item2.text": "This software will provide a full platform and education for the beginning farmer. Preventing them from wading through the information, state and federal departments and information designed for agribusiness big farms. The majority of the agribusiness models require large expenditures of capital to become operational. Utilizing the practices and models presented here will allow new farmers to develop their models and prepare for decisions prior to spending their capital resources.",
     
-        "contact.title": "Contact Us"
+        "contact.title": "Contact Us",
+        "contact.description": "We do enjoy visitors at the farm however, we have crazy schedules. We request that you call and schedule a visit to ensure we are here to greet you.",
+        "contact.farm.name": "Mesquite Field Farm",
+        "contact.farm.detail": "Please visit our social media and website for additional information:",
+        "contact.farm.emailContact": "You can email us at:"
     },
     "fr": {
         "home.name": "RegeneratIT",
