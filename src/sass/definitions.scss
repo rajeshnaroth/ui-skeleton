@@ -17,12 +17,6 @@ $fontColor:        rgb(80, 80, 80);
 $linkColor:        rgb(80, 100, 255);
 $linkColorHover:   rgb(80, 100, 255);
 $linkColorVisited: rgb(80, 100, 255);
-$h1Color:          rgb(255, 255, 255);
-$h2Color:          rgb(255, 255, 255);
-$h3Color:          rgb(255, 255, 255);
-$h4Color:          rgb(255, 255, 255);
-$h5Color:          rgb(255, 255, 255);
-$h6Color:          rgb(255, 255, 255);
 
 $borderLineColor:   rgb(100, 100, 100);
 //fonts
@@ -57,4 +51,31 @@ $font-light:  OpenSans Light, Century Gothic, CenturyGothic, AppleGothic, sans-s
   -ms-transition: $args;
   -o-transition: $args;
   transition: $args;
+}
+
+$breakpoints: (
+  'xs': ( max-width: 479px ),
+  'sm': ( min-width: 480px ),
+  'md': ( min-width: 768px ),
+  'lg': ( min-width: 992px ),
+  'xl': ( min-width: 1200px )
+) !default;
+
+/// Mixin to manage responsive breakpoints
+/// @author Hugo Giraudel
+/// @param {String} $breakpoint - Breakpoint name
+/// @require $breakpoints
+@mixin media-breakpoint-up($size) {
+  // If the key exists in the map
+  @if map-has-key($breakpoints, $size) {
+    // Prints a media query based on the value
+    @media #{inspect(map-get($breakpoints, $size))} {
+      @content;
+    }
+  }
+  // If the key doesn't exist in the map
+  @else {
+    @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
+        + "Available breakpoints are: #{map-keys($breakpoints)}.";
+  }
 }

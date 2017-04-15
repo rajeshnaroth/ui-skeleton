@@ -1,4 +1,4 @@
-@import '~bootstrap/scss/bootstrap';
+// @import '~bootstrap-sass/assets/stylesheets/bootstrap';
 @import 'lib/font-awesome/sass/font-awesome';
 
 @import 'definitions';
@@ -12,23 +12,17 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
   font-family: $font-bold;
-  color:$h1Color;
+  color:white;
   padding:0 0 0 0;
   margin: 0 0 0 0;
+  color:$fg3;
 }
 
 h1 { 
   font-size:3rem;
-  color:$h1Color;
 }
 
-h4 {
-  color: $h4Color;
-  text-shadow:#000000 3px 2px 2px;
-  letter-spacing:0.1em;
-  font-size:2rem;
-  text-align: center;
-}
+
 
 .app {
   position:relative;
