@@ -1,0 +1,26 @@
+.grid {
+    display:flex;
+    display:-webkit-flex;
+    flex-wrap: wrap;
+    -webkit-flex-wrap: wrap;
+    .cell {
+        flex:0 0 100%;
+        -webkit-flex:0 0 100%;
+    }
+    .cell-sm-full{
+        @include media-breakpoint-up(md) { 
+            flex:1;
+            -webkit-flex:1;
+        }
+    }
+    .cell-md-full{
+        @include media-breakpoint-up(lg) { 
+            flex:1;
+            -webkit-flex:1;
+        }
+    }
+}
+
+.center{
+    align-items: center;
+}

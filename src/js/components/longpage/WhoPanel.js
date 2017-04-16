@@ -4,19 +4,19 @@ import img1 from '../../../images/logo.svg';
 import img2 from '../../../images/logo.svg';
 
 const WhoPanel = (props) => (
-    <div className="who-we-are pagelet container-fluid"> 
-        <div className="row title">
-            <h4 className="col align-self-end">
+    <div className="who-we-are pagelet"> 
+        <div className="grid title">
+            <h4 className="cell">
                 <FormattedMessage id="who.title" />
             </h4>
         </div>
-        <div className="d-flex align-items-center justify-content-center">
-            <article className="statement">
+        <div className="grid center">
+            <article className="cell statement">
                 <FormattedMessage id="who.description" />
             </article>
         </div>
-        <div className="row">
-            <div className="bulletbox col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+        <div className="grid">
+            <div className="bulletbox cell cell-sm-full">
                 <h5>
                     <FormattedMessage id="who.person1" />
                 </h5>
@@ -27,7 +27,7 @@ const WhoPanel = (props) => (
                     </figcaption>
                 </figure>
             </div>
-            <div className="bulletbox col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+            <div className="bulletbox cell cell-sm-full">
                 <h5>
                     <FormattedMessage id="who.person2" />
                 </h5>

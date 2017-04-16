@@ -6,7 +6,7 @@ import { IntlProvider } from 'react-intl';
 import configureStore from './utils/configureStore';
 import getLocaleTransition from './utils/getLocaleTranslatons';
 
-import 'bootstrap/dist/css/bootstrap.css'
+// import 'bootstrap/dist/css/bootstrap.css'
 import App from './App';
 import '../css/index.css';
 

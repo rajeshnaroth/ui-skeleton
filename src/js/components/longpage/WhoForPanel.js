@@ -2,14 +2,14 @@ import React from 'react';
 import { FormattedMessage } from 'react-intl';
 
 const WhoForPanel = (props) => (
-    <div className="who-we-do-it-for pagelet container-fluid"> 
-        <div className="row title">
-            <h4 className="col align-self-end">
+    <div className="who-we-do-it-for pagelet"> 
+        <div className="grid center title">
+            <h4 className="cell">
                 <FormattedMessage id="whofor.title" />
             </h4>
         </div>
-        <div className="row bulletbox">
-            <article className="bulletbox col col-12 col-sm-12 col-md-6">
+        <div className="grid bulletbox">
+            <article className="bulletbox cell cell-sm-full">
                 <h5>
                     <FormattedMessage id="whofor.item1" />
                 </h5>
@@ -17,7 +17,7 @@ const WhoForPanel = (props) => (
                     <FormattedMessage id="whofor.item1.text" />
                 </p>
             </article>
-            <article className="bulletbox col col-12 col-sm-12 col-md-6">
+            <article className="bulletbox cell cell-sm-full">
                 <h5>
                     <FormattedMessage id="whofor.item2" />
                 </h5>

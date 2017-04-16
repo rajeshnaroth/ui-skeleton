@@ -2,20 +2,20 @@ import React from 'react';
 import { FormattedMessage } from 'react-intl';
 
 const WhatPanel = (props) => (
-    <div className="what-we-do pagelet container-fluid"> 
-        <div className="row title">
-            <h4 className="col align-self-end">
+    <div className="what-we-do pagelet"> 
+        <div className="grid center">
+            <h4 className="cell">
                 <FormattedMessage id="what.title" />
             </h4>
         </div>
 
-        <div className="d-flex align-items-center justify-content-center">
-            <article className="statement">
+        <div className="grid center">
+            <article className="cell statement">
                 <FormattedMessage id="what.description" />
             </article>
         </div>
-        <div className="row bulletbox">
-            <section className="col col-sm-12 col-md-12 col-lg-4 col-xl-4">
+        <div className="grid">
+            <section className="cell cell-md-full bulletbox">
                 <div className="bullets">
                     <h5>
                         <FormattedMessage id="what.edu" />
@@ -32,7 +32,7 @@ const WhatPanel = (props) => (
                 </div>   
             </section>
             
-            <section className="col col-sm-12 col-md-12 col-lg-4 col-xl-4">
+            <section className="cell cell-md-full bulletbox">
                 <div className="bullets">
                     <h5>
                         <FormattedMessage id="what.farm" />
@@ -50,7 +50,7 @@ const WhatPanel = (props) => (
                 </div>
             </section>
 
-            <section className="col col-sm-12 col-md-12 col-lg-4 col-xl-4">
+            <section className="cell cell-md-full bulletbox">
                 <div className="bullets">
                     <h5>
                         <FormattedMessage id="what.data" />
@@ -71,6 +71,3 @@ const WhatPanel = (props) => (
 );
 
 export default WhatPanel;
-/*
-
-        */

@@ -3,13 +3,13 @@ import { FormattedMessage } from 'react-intl';
 
 const HomePanel = (props) => (
     <div className="home pagelet"> 
-        <div className="d-flex align-items-center justify-content-center banner">
-        <h3>
+        <div className="grid center banner">
+        <h3 className="cell">
             <FormattedMessage id="home.tagline" defaultMessage={``} />
         </h3>
         </div>
-        <div className="d-flex align-items-center justify-content-center statement">
-            <article className="">
+        <div className="grid center statement">
+            <article className="cell">
                 <p>
                     <FormattedMessage id="home.description" defaultMessage={``} />
                 </p>

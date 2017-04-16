@@ -3,9 +3,9 @@ import { FormattedMessage } from 'react-intl';
 import farmImage from '../../../images/logo.svg';
 
 const ContactPanel = (props) => (
-    <div className="contact pagelet container-fluid"> 
-        <div className="row title">
-            <h4 className="col align-self-end">
+    <div className="contact pagelet"> 
+        <div className="grid center title">
+            <h4 className="cell">
                 <FormattedMessage id="contact.title" />
             </h4>
         </div>
@@ -15,11 +15,11 @@ const ContactPanel = (props) => (
             </p>
         
             <h5><FormattedMessage id="contact.farm.name" /></h5>
-            <div className="row">
-                <figure className="figure col col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+            <div className="grid">
+                <figure className="figure cell cell-sm-full">
                     <img className="founder figure-img img-fluid" src={farmImage} alt="farmname"/>
                 </figure>
-                <div className="col col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                <div className="cell cell-sm-full">
                     <address>
                         <FormattedMessage id="contact.farm.detail" />
                         <br/>

@@ -2,14 +2,14 @@ import React from 'react';
 import { FormattedMessage } from 'react-intl';
 
 const WhyPanel = (props) => (
-    <div className="why-we-do-it pagelet container-fluid"> 
-        <div className="row title">
-            <h4 className="col align-self-end">
+    <div className="why-we-do-it pagelet"> 
+        <div className="grid title">
+            <h4 className="cell">
                 <FormattedMessage id="why.title" />
             </h4>
         </div>
-        <div className="row bulletbox">
-            <article className="bulletbox col-12">
+        <div className="grid bulletbox">
+            <article className="bulletbox cell cell-sm-full">
                 <h5>
                     <FormattedMessage id="why.item1" />
                 </h5>
@@ -17,7 +17,7 @@ const WhyPanel = (props) => (
                     <FormattedMessage id="why.item1.text" />
                 </p>
             </article>
-            <article className="bulletbox col-12">
+            <article className="bulletbox cell cell-sm-full">
                 <h5>
                     <FormattedMessage id="why.item2" />
                 </h5>
