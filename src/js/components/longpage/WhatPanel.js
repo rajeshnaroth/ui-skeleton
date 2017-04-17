@@ -3,15 +3,17 @@ import { FormattedMessage } from 'react-intl';
 
 const WhatPanel = (props) => (
     <div className="what-we-do pagelet"> 
-        <div className="grid center">
+        <div className="grid center title">
             <h4 className="cell">
                 <FormattedMessage id="what.title" />
             </h4>
         </div>
 
-        <div className="grid center">
+        <div className="grid gutters center">
             <article className="cell statement">
-                <FormattedMessage id="what.description" />
+                <p>
+                    <FormattedMessage id="what.description" />
+                </p>
             </article>
         </div>
         <div className="grid">

@@ -45,7 +45,6 @@
     "whatwg-fetch": "2.0.2"
   },
   "dependencies": {
-    "bootstrap": "4.0.0-alpha.6",
     "choreojs": "^1.0.9",
     "intl": "^1.2.5",
     "lodash": "^4.17.4",

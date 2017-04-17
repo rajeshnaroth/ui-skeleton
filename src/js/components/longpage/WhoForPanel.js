@@ -13,17 +13,21 @@ const WhoForPanel = (props) => (
                 <h5>
                     <FormattedMessage id="whofor.item1" />
                 </h5>
-                <p>
-                    <FormattedMessage id="whofor.item1.text" />
-                </p>
+                <div className="figure text-center">
+                    <p>
+                        <FormattedMessage id="whofor.item1.text" />
+                    </p>
+                </div>
             </article>
             <article className="bulletbox cell cell-sm-full">
                 <h5>
                     <FormattedMessage id="whofor.item2" />
                 </h5>
-                <p>
-                    <FormattedMessage id="whofor.item2.text" />
-                </p>
+                <div className="figure text-center">
+                    <p>
+                        <FormattedMessage id="whofor.item2.text" />
+                    </p>
+                </div>
             </article>
         </div>
     </div>

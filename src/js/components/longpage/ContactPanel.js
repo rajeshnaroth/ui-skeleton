@@ -9,20 +9,23 @@ const ContactPanel = (props) => (
                 <FormattedMessage id="contact.title" />
             </h4>
         </div>
-        <article className="statement">
+        <div className="statement">
             <p>
                 <FormattedMessage id="contact.description" />
             </p>
-        
+        </div>
+        <div className="bulletbox">
             <h5><FormattedMessage id="contact.farm.name" /></h5>
+
             <div className="grid">
                 <figure className="figure cell cell-sm-full">
                     <img className="founder figure-img img-fluid" src={farmImage} alt="farmname"/>
                 </figure>
                 <div className="cell cell-sm-full">
                     <address>
-                        <FormattedMessage id="contact.farm.detail" />
-                        <br/>
+                        <p>
+                            <FormattedMessage id="contact.farm.detail" />
+                        </p>
                         <a href="http://www.mesquitefieldfarm.com" target="_new">www.mesquitefieldfarm.com</a>
                         <br/>
                         <a href="http://www.facebook.com/mesquitefieldfarm" target="_new">www.facebook.com/mesquitefieldfarm</a>
@@ -34,7 +37,7 @@ const ContactPanel = (props) => (
                     </address>
                 </div>
             </div>
-        </article>
+        </div>
     </div>
 );
 
