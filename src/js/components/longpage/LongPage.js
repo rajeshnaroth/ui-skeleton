@@ -35,17 +35,21 @@ const LongPage = React.createClass({
         this.lastScrollY = window.scrollY;
     },
     resize(ev, tgt) {
-        this.forceUpdate();        
+        this.forceUpdate(); 
+        console.log("LongPage.js: resize ");
+                              
     },
     componentDidMount() {
         this.scrollerCB = _.throttle(this.scroll, 300);
         this.resizeCB = _.throttle(this.resize, 500);
         window.addEventListener('scroll', this.scrollerCB);        
         window.addEventListener('resize', this.resizeCB);        
+        window.addEventListener('orientationchange', this.resizeCB);        
     },
     componentWillUnmount() {
         window.removeEventListener('scroll', this.scrollCB);
         window.removeEventListener('resize', this.resizeCB);
+        window.addEventListener('orientationchange', this.resizeCB); 
     },
     componentWillReceiveProps(nextProps) {
         const currentPanelId = nextProps.currentPanel.panelId;

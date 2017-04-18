@@ -23,7 +23,7 @@ const WhoPanel = (props) => (
                     <FormattedMessage id="who.person1" />
                 </h5>
                 <div className="figure text-center">
-                    <img className="founder figure-img img-fluid rounded" src={img1} alt="pic1"/>
+                    <img className="thumb" src={img1} alt="pic1"/>
                     <p className="text-left">
                         <FormattedMessage id="who.person1.details" />
                     </p>
@@ -34,7 +34,7 @@ const WhoPanel = (props) => (
                     <FormattedMessage id="who.person2" />
                 </h5>
                 <div className="figure text-center">
-                    <img className="founder mx-auto figure-img img-fluid rounded align-items-center" src={img2} alt="pic1"/>
+                    <img className="thumb" src={img2} alt="pic1"/>
                     <p className="text-left">
                         <FormattedMessage id="who.person2.details" />
                     </p>

@@ -4,11 +4,8 @@
         min-height: 100vh;
         height: auto;
         box-sizing: border-box;
+        padding-bottom: 2rem;
 
-        // figure, article, figcaption, blockquote, ul, li, p {
-        //     padding:0 0 0 0;
-        //     margin:0 0 0 0;
-        // }// figure, article, figcaption, blockquote, ul, li, p {
         figure, p {
             padding:0 0 0 0;
             margin:0 0 0 0;
@@ -17,7 +14,7 @@
         h4 {
             font-size: 2rem;
             font-family: $font-light;
-            color:$fg2;
+            color:white;
             text-shadow:#000000 3px 2px 2px;
             letter-spacing:0.1em;
             text-align: center;
@@ -30,15 +27,10 @@
 
         .statement {
             @include border-radius(2rem);
-            //background-color: $whiteFadedBg;
-            // margin:1rem 0;
-            // padding: 1em;
             text-align: center;
             color: white;
             font-size:1rem;
-            p {
-                padding: 2em;
-            }
+            p { padding: 2em; }
         }
 
         .bulletbox {
@@ -46,23 +38,19 @@
             h5 {
                 font-family: $font-light;
                 font-size: 2rem;
+                color: $fg2;
+                padding:0 1em;
                 // margin:0.5rem;
             }
+            p { color:$bg1; }
 
-            .bullets {
-                // margin:1rem;
-                padding: 2em;
-            }
+            .bullets { padding: 2rem; }
 
-            p {
-                color:$bg1;
-            }
         }
 
-
         &.home {
-            vertical-align: middle;
-            background-color:$bg3;
+            background-color:$bg3;            
+
             h3 {
                 font-family: $font-light;
                 font-size:2rem;
@@ -72,10 +60,11 @@
                 text-align: center;
                 margin-top: 1em;
             }
+
             .banner {
                 height:50vh;
                 background-size: cover !important;
-                background: url(../images/bg1.jpg) no-repeat bottom center;
+                background: url(../images/agriculture.jpg) no-repeat bottom center;
                 @include media-breakpoint-up(sm) { 
                     font-size:1rem;
                 }
@@ -83,6 +72,7 @@
                     font-size:2rem;
                 }
             }
+
             .statement {
                 height:50vh;
                 font-size:2rem;
@@ -107,90 +97,90 @@
 
         &.what-we-do {
             background-color:bg1;
-            .statement {
-            }
+
             .bulletbox {
-                h5 { color: $fg2; }
-                .bullets {
+                h5 {}
+                li {
                     color:$fg3;
+                    list-style: none;
+                }
+                .figure {
+                    p {
+                        padding:0 1rem;
+                        color:$fg1;
+                    }
+                    .thumb {
+                        @include border-radius(50%);
+                        float:left;
+                        padding:1rem;
+                        height:13em;
+                        @include media-breakpoint-up(md) { 
+                            float:none;
+                        }
+                    }
                 }
             }
         }
 
         &.who-we-are {
-            h4 {
-                color:$bg1;
-            }
             background-color:white;
-            .statement {
-                color: $bg1;
-            }
+            padding-bottom: 1rem;
+
+            h4 { color:$bg1; }
+
+            .statement { color: $bg1; }
             .bulletbox {
-                
-                h5 { padding:0 0 2em 1em;   color: $bg1; }
-                .bullets {
-                    background-color: $whiteFadedBg;
-                }
-                .founder{
-                    width:70%;
-                }
-                .figure p {
-                    padding:2em;
+                h5 { color: $bg3; }
+
+                .founder { width:70%; }
+                .figure {
+                    p { padding:0 1em; }
+                    .thumb { width:70%; }
                 }
             }
         }
 
         &.why-we-do-it {
             background-color:$bg3;
-            .statement {
-            }
+
             .bulletbox {
-                h5 { padding:0 0 0em 1em; }
-                p {
-                    color:$fg1;
-                }
-                .figure p {
-                    padding:2em;
-                }
+                p { color:white; }
+
+                .figure p { padding:0 2rem; }
             }
         }
 
         &.who-we-do-it-for {
             background-color:bg1;
-            .statement {
-            }
+
             .bulletbox {
-                h5 { padding:0 0 0em 1em; }
-                p {
-                    color:$fg1;
-                }
-                .figure p {
-                    padding:2em;
+                h5 { }
+
+                .figure {
+                    p {
+                        padding:0 1rem;
+                        color:$fg1;
+                    }
+                    .thumb {
+                        @include border-radius(50%);
+                        float:left;
+                        padding:1rem;
+                        height:16rem;
+                    }
                 }
             }
         }
 
         &.contact {
-            background-color: $whiteFadedBg;
-            .statement{
-                text-align: left;
-            }
-            a, a:visited, a:active {
-                color:$fg3;
-            }
-            address {
-                margin-top: 3rem;
-            }
+            background-color: $bg2;
+
+            .statement{ text-align: left; }
+            a, a:visited, a:active { color:white; }
+            address { margin-top: 3rem; }
             .bulletbox {
-                h5 { 
-                    padding: 1rem 0 0 1rem;
-                }
-                p {
-                    color:$fg1;
-                }
-                .figure p {
-                    padding:2em;
-                }
+                h5 { padding: 1rem 0 0 1rem; }
+                p { color:white; }
+                .figure p { padding:2rem; }
             }
         }
     }
