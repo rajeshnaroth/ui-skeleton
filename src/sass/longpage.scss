@@ -5,6 +5,7 @@
         height: auto;
         box-sizing: border-box;
         padding-bottom: 2rem;
+        font-size:1.1rem;
 
         figure, p {
             padding:0 0 0 0;
@@ -19,6 +20,9 @@
             letter-spacing:0.1em;
             text-align: center;
             padding: 2.5rem 0 1rem;
+            @include media-breakpoint-up(lg) { 
+                padding: 6rem;
+            }
         }
 
         .title {
@@ -44,7 +48,7 @@
             }
             p { color:$bg1; }
 
-            .bullets { padding: 2rem; }
+            //.bullets { padding: 2rem; }
 
         }
 
@@ -59,6 +63,18 @@
                 letter-spacing:0.2rem;
                 text-align: center;
                 margin-top: 1em;
+                @include media-breakpoint-up(xs) { 
+                    font-size:1.5rem;
+                }
+                @include media-breakpoint-up(sm) { 
+                    font-size:1.5rem;
+                }
+                @include media-breakpoint-up(md) { 
+                    font-size:2rem;
+                }
+                @include media-breakpoint-up(lg) { 
+                    font-size:2.5rem;
+                }
             }
 
             .banner {
@@ -99,7 +115,7 @@
             background-color:bg1;
 
             .bulletbox {
-                h5 {}
+                h5 { font-size:1.8rem;}
                 li {
                     color:$fg3;
                     list-style: none;
@@ -109,13 +125,32 @@
                         padding:0 1rem;
                         color:$fg1;
                     }
+                    .holder {
+                        text-align: center;
+                    }
                     .thumb {
-                        @include border-radius(50%);
+                        //@include border-radius(50%);
                         float:left;
                         padding:1rem;
-                        height:13em;
-                        @include media-breakpoint-up(md) { 
+                        width:12em;
+                        height:auto;
+                        @include media-breakpoint-up(xs) { 
                             float:none;
+                        }
+                        @include media-breakpoint-up(sm) { 
+                            float:left;
+                            width:13em;
+                            height:auto;
+                        }
+                        @include media-breakpoint-up(md) { 
+                            float:left;
+                            width:16em;
+                            height:auto;
+                        }
+                        @include media-breakpoint-up(lg) { 
+                            float:none;
+                            width:auto;
+                            height:16em;
                         }
                     }
                 }
@@ -134,7 +169,8 @@
 
                 .founder { width:70%; }
                 .figure {
-                    p { padding:0 1em; }
+                    padding:0 2rem 1rem 2rem;
+                    p {  }
                     .thumb { width:70%; }
                 }
             }
@@ -146,7 +182,17 @@
             .bulletbox {
                 p { color:white; }
 
-                .figure p { padding:0 2rem; }
+                .figure {
+                    p { padding:0 2rem; }
+                    .thumb {
+                        @include border-radius(12%);
+                        padding:1rem;
+                        height:18rem;
+                    }
+                    .holder {
+                            text-align: center;
+                    }
+                }
             }
         }
 
@@ -158,14 +204,16 @@
 
                 .figure {
                     p {
-                        padding:0 1rem;
+                        padding:0 2rem 1.5rem 2rem;
                         color:$fg1;
                     }
                     .thumb {
                         @include border-radius(50%);
-                        float:left;
                         padding:1rem;
                         height:16rem;
+                    }
+                    .holder {
+                        text-align: center;
                     }
                 }
             }
@@ -176,12 +224,26 @@
 
             .statement{ text-align: left; }
             a, a:visited, a:active { color:white; }
-            address { margin-top: 3rem; }
             .bulletbox {
-                h5 { padding: 1rem 0 0 1rem; }
-                p { color:white; }
-                .figure p { padding:2rem; }
+                .info { padding:0 2rem }; 
+                .figure {
+                    text-align: center;
+                    p {
+                        padding:1rem;
+                        color:white;
+                    }
+                    .thumb {
+                        @include border-radius(17%);
+                        float:none;
+                        @include media-breakpoint-up(lg) { 
+                            float:left;
+                        }
+                        padding:1rem;
+                        height:16rem;
+                    }
+                }
             }
+            address { margin-bottom: 3rem; }
         }
     }
 }

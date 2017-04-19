@@ -18,7 +18,7 @@ const Header = React.createClass({
         this.showMenu = false;
         return {
             headerStyle:{},
-            navStyle:{ display:'none', opacity:0 }
+            navStyleClass:"absent invisible"//"{ display:'none', opacity:0 }"
         }
     },
     showNav() {
@@ -29,12 +29,12 @@ const Header = React.createClass({
 
         this.seq1.add(() => {
             this.setState({
-                navStyle:{ display:'block', opacity:0 }
+                navStyleClass:"present invisible" //{ opacity:0, display:'block' }
             });
         });
         this.seq1.add(() => {
             this.setState({
-                navStyle:{ opacity:1 }
+                navStyleClass:"present visible" //{ opacity:0.9 }
             });
         });
         this.seq1.start();
@@ -47,13 +47,13 @@ const Header = React.createClass({
         this.showMenu = false;
         this.seq2.add(() => {
             this.setState({
-                navStyle:{ opacity:0 }
+                navStyleClass: "invisible"//{ opacity:0 }
             });
         });
         this.seq2.wait(500);
         this.seq2.add(() => {
             this.setState({
-            navStyle:{ opacity:0, display:'none' }
+            navStyleClass: "invisible absent"//{ display:'none' }
             });
         });
         this.seq2.start();
@@ -70,7 +70,7 @@ const Header = React.createClass({
         if (nextProps.showHeader !== this.props.showHeader) {
             if (nextProps.showHeader) {
                 this.setState({
-                    headerStyle:{ opacity:1 }
+                    headerStyle:{ opacity:0.9 }
                 });
             } else {
                 this.setState({
@@ -94,7 +94,7 @@ const Header = React.createClass({
                         <FormattedMessage id="home.name" defaultMessage={`Logo/Title`} />
                     </h1>
                 </section>
-                <nav style={this.state.navStyle}>
+                <nav className={this.state.navStyleClass}>
                     <ul onClick={this.hideNav}>
                         <li><span onClick={goToPanel('who')}>Who we are</span></li>
                         <li><span onClick={goToPanel('what')}>What we do</span></li>

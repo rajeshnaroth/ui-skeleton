@@ -1,6 +1,6 @@
 import React from 'react';
 import { FormattedMessage } from 'react-intl';
-import farmImage from '../../../images/logo.svg';
+import farmImage from '../../../images/cows.jpg';
 
 const ContactPanel = (props) => (
     <div className="contact pagelet"> 
@@ -15,28 +15,28 @@ const ContactPanel = (props) => (
             </p>
         </div>
         <div className="bulletbox">
-            <h5><FormattedMessage id="contact.farm.name" /></h5>
-
-            <div className="grid">
-                <figure className="figure cell cell-sm-full">
-                    <img className="founder figure-img img-fluid" src={farmImage} alt="farmname"/>
-                </figure>
-                <div className="cell cell-sm-full">
-                    <address>
-                        <p>
-                            <FormattedMessage id="contact.farm.detail" />
-                        </p>
-                        <a href="http://www.mesquitefieldfarm.com" target="_new">www.mesquitefieldfarm.com</a>
-                        <br/>
-                        <a href="http://www.facebook.com/mesquitefieldfarm" target="_new">www.facebook.com/mesquitefieldfarm</a>
-                    </address>
-                
-                    <address>
-                        <FormattedMessage id="contact.farm.emailContact" />
-                        <p> doug@mesquitefieldfarm.com <br/> melissa@mesquitefieldfarm.com </p> 
-                    </address>
+            <article className="bulletbox cell cell-sm-full">
+                <h5><FormattedMessage id="contact.farm.name" /></h5>
+                <div className="info">
+                    <div className="figure">
+                        <img className="thumb" src={farmImage} alt="farm"/>
+                        <address>
+                            <p>
+                                <FormattedMessage id="contact.farm.detail" />
+                            </p>
+                            <a href="http://www.mesquitefieldfarm.com" target="_new">www.mesquitefieldfarm.com</a>
+                            <br/>
+                            <a href="http://www.facebook.com/mesquitefieldfarm" target="_new">www.facebook.com/mesquitefieldfarm</a>
+                        </address>
+                    
+                        <address>
+                            <FormattedMessage id="contact.farm.emailContact" />
+                            <p> doug@mesquitefieldfarm.com <br/> melissa@mesquitefieldfarm.com </p> 
+                        </address>
+                    </div>
                 </div>
-            </div>
+            </article>
+            
         </div>
     </div>
 );

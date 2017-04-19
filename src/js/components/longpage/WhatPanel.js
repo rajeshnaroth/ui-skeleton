@@ -1,8 +1,8 @@
 import React from 'react';
 import { FormattedMessage } from 'react-intl';
-import educationImage from '../../../images/logo.svg';
-import farmImage from '../../../images/logo.svg';
-import dataImage from '../../../images/logo.svg';
+import educationImage from '../../../images/board.png';
+import farmImage from '../../../images/hens.png';
+import dataImage from '../../../images/gears-bw.png';
 
 const WhatPanel = (props) => (
     <div className="what-we-do pagelet"> 
@@ -25,8 +25,10 @@ const WhatPanel = (props) => (
                     <h5>
                         <FormattedMessage id="what.edu" />
                     </h5>
-                    <div className="figure text-center">
-                        <img className="thumb" src={educationImage} alt="educationImage"/>
+                    <div className="figure">
+                        <div className="holder">
+                            <img className="thumb" src={educationImage} alt="educationImage"/>
+                        </div>
                         <ul>
                             <li><FormattedMessage id="what.edu.1" /></li>
                             <li><FormattedMessage id="what.edu.2" /></li>
@@ -45,8 +47,10 @@ const WhatPanel = (props) => (
                     <h5>
                         <FormattedMessage id="what.farm" />
                     </h5>
-                    <div className="figure text-center">
-                        <img className="thumb" src={farmImage} alt="farmImage"/>
+                    <div className="figure">
+                        <div className="holder">
+                            <img className="thumb" src={farmImage} alt="farmImage"/>
+                        </div>
                         <ul>
                             <li><FormattedMessage id="what.farm.1" /></li>
                             <li><FormattedMessage id="what.farm.2" /></li>
@@ -66,8 +70,10 @@ const WhatPanel = (props) => (
                     <h5>
                         <FormattedMessage id="what.data" />
                     </h5>
-                    <div className="figure text-center">
-                        <img className="thumb" src={dataImage} alt="dataImage"/>
+                    <div className="figure">
+                        <div className="holder">
+                            <img className="thumb" src={dataImage} alt="dataImage"/>
+                        </div>
                         <ul>
                             <li><FormattedMessage id="what.data.1" /></li>
                             <li><FormattedMessage id="what.data.2" /></li>

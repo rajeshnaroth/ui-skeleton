@@ -1,3 +1,39 @@
+.grid {
+    display:flex;
+    display:-webkit-flex;
+    flex-wrap: wrap;
+    -webkit-flex-wrap: wrap;
+    .cell {
+        flex:0 0 100%;
+        -webkit-flex:0 0 100%;
+    }
+    .cell-share {
+        flex:1;
+        -webkit-flex:1;
+    }
+    .cell-sm-full{
+        @include media-breakpoint-up(md) { 
+            flex:1;
+            -webkit-flex:1;
+        }
+    }
+    .cell-md-full{
+        @include media-breakpoint-up(lg) { 
+            flex:1;
+            -webkit-flex:1;
+        }
+    }
+}
+
+.center{
+    align-items: center;
+    -webkit-align-items: center;
+}
+
+.left-margin-1 {
+    margin-left: 2em;
+}
+
 .stretched-image-panel {
     background-repeat: no-repeat;
     background-size: cover;

@@ -22,7 +22,7 @@ const WhoPanel = (props) => (
                 <h5>
                     <FormattedMessage id="who.person1" />
                 </h5>
-                <div className="figure text-center">
+                <div className="figure">
                     <img className="thumb" src={img1} alt="pic1"/>
                     <p className="text-left">
                         <FormattedMessage id="who.person1.details" />
@@ -33,7 +33,7 @@ const WhoPanel = (props) => (
                 <h5>
                     <FormattedMessage id="who.person2" />
                 </h5>
-                <div className="figure text-center">
+                <div className="figure">
                     <img className="thumb" src={img2} alt="pic1"/>
                     <p className="text-left">
                         <FormattedMessage id="who.person2.details" />

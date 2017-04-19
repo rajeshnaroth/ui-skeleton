@@ -16,7 +16,7 @@ const WhoForPanel = (props) => (
                     <FormattedMessage id="whofor.item1" />
                 </h5>
                 <div className="figure text-center">
-                    <div>
+                    <div className="holder">
                         <img className="thumb" src={smallFarmer} alt="smallFarmer"/>
                         <p className="">
                             <FormattedMessage id="whofor.item1.text" />
@@ -29,7 +29,7 @@ const WhoForPanel = (props) => (
                     <FormattedMessage id="whofor.item2" />
                 </h5>
                 <div className="figure img-fluid rounded">
-                    <div>
+                    <div className="holder">
                         <img className="cell-share  thumb new-farmer" src={newFarmer} alt="pic1"/>
                         <p className="cell-share">
                             <FormattedMessage id="whofor.item2.text" />

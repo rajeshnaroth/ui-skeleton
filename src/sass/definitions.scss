@@ -46,15 +46,16 @@ $font-light:  OpenSans Light, Century Gothic, CenturyGothic, AppleGothic, sans-s
 }
 
 @mixin transition($args...) {
+  transition: $args;
   -webkit-transition: $args;
   -moz-transition: $args;
   -ms-transition: $args;
   -o-transition: $args;
-  transition: $args;
 }
 
 $breakpoints: (
-  'xs': ( max-width: 479px ),
+  // 'xs': ( max-width: 479px ),
+  'xs': ( min-width: 1px ),
   'sm': ( min-width: 480px ),
   'md': ( min-width: 768px ),
   'lg': ( min-width: 992px ),
