@@ -20,13 +20,13 @@
             letter-spacing:0.1em;
             text-align: center;
             padding: 2.5rem 0 1rem;
-            @include media-breakpoint-up(lg) { 
-                padding: 6rem;
-            }
         }
 
         .title {
             height:20vh;
+            @include media-breakpoint-up(lg) { 
+                padding: 6rem 0 0 0;
+            }
         }
 
         .statement {
@@ -59,7 +59,7 @@
                 font-family: $font-light;
                 font-size:2rem;
                 font-weight:600;
-                text-shadow:#000000 2px 4px 4px;
+                text-shadow:black 2px 4px 4px;
                 letter-spacing:0.2rem;
                 text-align: center;
                 margin-top: 1em;
@@ -73,14 +73,18 @@
                     font-size:2rem;
                 }
                 @include media-breakpoint-up(lg) { 
+                    color: white;
                     font-size:2.5rem;
+                    font-family: $font-normal;
+                    text-shadow:black 3px 3px 3px;
+                    margin-top:2em;
                 }
             }
 
             .banner {
                 height:50vh;
                 background-size: cover !important;
-                background: url(../images/agriculture.jpg) no-repeat bottom center;
+                background: url(../images/agriculture-1.jpg) no-repeat top center;
                 @include media-breakpoint-up(sm) { 
                     font-size:1rem;
                 }
@@ -97,16 +101,13 @@
                     font-size:1rem;
                 }
                 @include media-breakpoint-up(sm) { 
-                    font-size:1.5rem;
+                    font-size:1.2rem;
                 }
                 @include media-breakpoint-up(md) { 
-                    font-size:1.5rem;
+                    font-size:1.3rem;
                 }
                 @include media-breakpoint-up(lg) { 
-                    font-size:2rem;
-                }
-                @include media-breakpoint-up(xl) { 
-                    font-size:2.5rem;
+                    font-size:1.6rem;
                 }
             }
         }
@@ -206,6 +207,7 @@
                     p {
                         padding:0 2rem 1.5rem 2rem;
                         color:$fg1;
+                        text-align: left;
                     }
                     .thumb {
                         @include border-radius(50%);
@@ -239,7 +241,7 @@
                             float:left;
                         }
                         padding:1rem;
-                        height:16rem;
+                        height:12rem;
                     }
                 }
             }

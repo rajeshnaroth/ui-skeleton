@@ -2,12 +2,12 @@ import React from 'react';
 import { FormattedMessage } from 'react-intl';
 import educationImage from '../../../images/board.png';
 import farmImage from '../../../images/hens.png';
-import dataImage from '../../../images/gears-bw.png';
+import dataImage from '../../../images/gears-sepia.png';
 
 const WhatPanel = (props) => (
     <div className="what-we-do pagelet"> 
-        <div className="grid center title">
-            <h4 className="cell">
+        <div className="center title">
+            <h4>
                 <FormattedMessage id="what.title" />
             </h4>
         </div>

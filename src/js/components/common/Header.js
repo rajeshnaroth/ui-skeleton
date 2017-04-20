@@ -17,7 +17,7 @@ const Header = React.createClass({
     getInitialState() { 
         this.showMenu = false;
         return {
-            headerStyle:{},
+            headerStyleClass:{},
             navStyleClass:"absent invisible"//"{ display:'none', opacity:0 }"
         }
     },
@@ -34,7 +34,7 @@ const Header = React.createClass({
         });
         this.seq1.add(() => {
             this.setState({
-                navStyleClass:"present visible" //{ opacity:0.9 }
+                navStyleClass:"present visible" //{ display:'block', opacity:1 }
             });
         });
         this.seq1.start();
@@ -53,7 +53,7 @@ const Header = React.createClass({
         this.seq2.wait(500);
         this.seq2.add(() => {
             this.setState({
-            navStyleClass: "invisible absent"//{ display:'none' }
+            navStyleClass: "invisible absent"//{ opacity:0, display:'none' }
             });
         });
         this.seq2.start();
@@ -70,11 +70,11 @@ const Header = React.createClass({
         if (nextProps.showHeader !== this.props.showHeader) {
             if (nextProps.showHeader) {
                 this.setState({
-                    headerStyle:{ opacity:0.9 }
+                    headerStyleClass: 'visible' //{ opacity:0.9 }
                 });
             } else {
                 this.setState({
-                    headerStyle:{ opacity:0 }
+                    headerStyleClass: 'invisible' //{ opacity:0 }
                 });
             }
         }
@@ -85,7 +85,7 @@ const Header = React.createClass({
             this.props.setPanelTo(panelId);
         }
         return (
-            <header style={this.state.headerStyle} >
+            <header className={this.state.headerStyleClass} >
                 <section>
                     <span className="hamburger-icon" onClick={this.toggleNav}>
                         <i className={hamburgerMenuIconClass} aria-hidden="true"></i> 

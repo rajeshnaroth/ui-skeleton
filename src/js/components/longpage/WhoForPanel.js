@@ -5,8 +5,8 @@ import smallFarmer from '../../../images/small-farmer.jpg';
 
 const WhoForPanel = (props) => (
     <div className="who-we-do-it-for pagelet"> 
-        <div className="grid center title">
-            <h4 className="cell">
+        <div className="center title">
+            <h4>
                 <FormattedMessage id="whofor.title" />
             </h4>
         </div>

@@ -5,8 +5,8 @@ import img2 from '../../../images/logo.svg';
 
 const WhoPanel = (props) => (
     <div className="who-we-are pagelet"> 
-        <div className="grid center title">
-            <h4 className="cell">
+        <div className="center title">
+            <h4>
                 <FormattedMessage id="who.title" />
             </h4>
         </div>

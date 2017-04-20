@@ -1,12 +1,12 @@
 import React from 'react';
 import { FormattedMessage } from 'react-intl';
-import personallyImage from '../../../images/one-pepper.jpg';
-import biggerPictureImage from '../../../images/lot-of-peppers.jpg';
+import personallyImage from '../../../images/one-pepper-c.jpg';
+import biggerPictureImage from '../../../images/lot-of-peppers-c.jpg';
 
 const WhyPanel = (props) => (
     <div className="why-we-do-it pagelet"> 
-        <div className="grid center title">
-            <h4 className="cell">
+        <div className="center title">
+            <h4>
                 <FormattedMessage id="why.title" />
             </h4>
         </div>
@@ -17,7 +17,7 @@ const WhyPanel = (props) => (
                 </h5>
                 <div className="figure">
                     <div className="holder">
-                        <img className="thumb" src={personallyImage} alt="personally"/>
+                        <img className="thumb" src={personallyImage} alt="Personally"/>
                     </div>
                     <p>
                     <FormattedMessage id="why.item1.text" />
@@ -30,7 +30,7 @@ const WhyPanel = (props) => (
                 </h5>
                 <div className="figure">
                     <div className="holder">
-                        <img className="thumb" src={biggerPictureImage} alt="bigger Picture"/>
+                        <img className="thumb" src={biggerPictureImage} alt="Bigger Picture"/>
                     </div>
                     <p>
                         <FormattedMessage id="why.item2.text" />

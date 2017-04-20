@@ -4,8 +4,8 @@ import farmImage from '../../../images/cows.jpg';
 
 const ContactPanel = (props) => (
     <div className="contact pagelet"> 
-        <div className="grid center title">
-            <h4 className="cell">
+        <div className="center title">
+            <h4>
                 <FormattedMessage id="contact.title" />
             </h4>
         </div>
