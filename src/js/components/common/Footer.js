@@ -1,7 +1,9 @@
 import React from 'react';
+import { FormattedMessage } from 'react-intl';
+
 const Footer = (props) => (
     <footer>       
-            Copyright & links
+        <FormattedMessage id="copyright" defaultMessage={"© RegeneratIT"} />
     </footer>
 
 );

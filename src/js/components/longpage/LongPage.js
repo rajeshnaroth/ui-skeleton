@@ -21,7 +21,8 @@ const LongPage = React.createClass({
         return {
             style: { scrollTop:0 },
             showHeader: true,
-            resized: false
+            resized: false,
+            panelStyle: {  }
         }
     },
     scroll(ev, tgt) {
@@ -42,6 +43,7 @@ const LongPage = React.createClass({
     componentDidMount() {
         this.scrollerCB = _.throttle(this.scroll, 300);
         this.resizeCB = _.throttle(this.resize, 500);
+        this.setState({ panelStyle:{ minHeight: window.innerHeight } })
         window.addEventListener('scroll', this.scrollerCB);        
         window.addEventListener('resize', this.resizeCB);        
         window.addEventListener('orientationchange', this.resizeCB);        
@@ -59,9 +61,6 @@ const LongPage = React.createClass({
             slowScrollTo(window.scrollY, yPos).then(() => {});
         }
     },
-    shouldComponentUpdate(nextProps, nextState) {
-        return false;
-    },
     render() {
         var setDomElement = (panelId) => (domElem) => { 
             if (domElem) {
@@ -74,32 +73,32 @@ const LongPage = React.createClass({
                 <HeaderContainer />
                 <div className="long-page">
                     <a name="home"></a>
-                    <section ref={ setDomElement('home') }>
+                    <section style={this.state.panelStyle} ref={ setDomElement('home') }>
                         <HomePanel />
                     </section>
                     
                     <a name="what"></a>
-                    <section ref={ setDomElement('what') }> 
+                    <section style={this.state.panelStyle} ref={ setDomElement('what') }> 
                         <WhatPanel />
                     </section>
                     
                     <a name="who"></a>
-                    <section ref={ setDomElement('who') } >
+                    <section style={this.state.panelStyle} ref={ setDomElement('who') } >
                         <WhoPanel />
                     </section>
 
                     <a name="why"></a>
-                    <section ref={ setDomElement('why') }> 
+                    <section style={this.state.panelStyle} ref={ setDomElement('why') }> 
                         <WhyPanel />
                     </section>
 
                     <a name="who-for"></a>
-                    <section ref={ setDomElement('whofor') }> 
+                    <section style={this.state.panelStyle} ref={ setDomElement('whofor') }> 
                         <WhoForPanel />
                     </section>
 
                     <a name="contact"></a>
-                    <section ref={ setDomElement('contact') }> 
+                    <section style={this.state.panelStyle} ref={ setDomElement('contact') }> 
                         <ContactPanel />
                     </section>
                 </div>

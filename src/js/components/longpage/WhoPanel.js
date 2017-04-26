@@ -1,7 +1,7 @@
 import React from 'react';
 import { FormattedMessage } from 'react-intl';
-import img1 from '../../../images/logo.svg';
-import img2 from '../../../images/logo.svg';
+import img1 from '../../../images/mellisa-1.jpg';
+import img2 from '../../../images/doug-1.jpg';
 
 const WhoPanel = (props) => (
     <div className="who-we-are pagelet"> 

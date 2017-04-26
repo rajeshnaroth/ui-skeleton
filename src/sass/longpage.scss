@@ -1,7 +1,7 @@
 .long-page {
 
     .pagelet {
-        min-height: 100vh;
+        //min-height: 100vh;
         height: auto;
         box-sizing: border-box;
         padding-bottom: 2rem;
@@ -172,7 +172,10 @@
                 .figure {
                     padding:0 2rem 1rem 2rem;
                     p {  }
-                    .thumb { width:70%; }
+                    .thumb { 
+                        width:70%; 
+                        @include border-radius(12%);
+                    }
                 }
             }
         }

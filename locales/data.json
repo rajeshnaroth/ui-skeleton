@@ -58,7 +58,9 @@
         "contact.description": "We do enjoy visitors at the farm however, we have crazy schedules. We request that you call and schedule a visit to ensure we are here to greet you.",
         "contact.farm.name": "Mesquite Field Farm",
         "contact.farm.detail": "Please visit our social media and website for additional information:",
-        "contact.farm.emailContact": "You can email us at:"
+        "contact.farm.emailContact": "You can email us at:",
+
+        "copyright": "© RegenratIT 2017"
     },
     "fr": {
         "home.name": "RegeneratIT",

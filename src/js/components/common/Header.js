@@ -17,7 +17,7 @@ const Header = React.createClass({
     getInitialState() { 
         this.showMenu = false;
         return {
-            headerStyleClass:{},
+            headerStyleClass:'',
             navStyleClass:"absent invisible"//"{ display:'none', opacity:0 }"
         }
     },
